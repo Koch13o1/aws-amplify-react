@@ -10,7 +10,8 @@ function App() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    message: "",
+    creditScore: "",
+    income:"",
   });
 
   const formDataHandleFunc = (
@@ -92,13 +93,26 @@ function App() {
             </div>
             <div className="mt-6">
               <label htmlFor="message" className="sr-only">
-                Message
+                Credit Score
               </label>
               <div className="relative">
                 <textarea
                   className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm"
-                  placeholder="Message"
-                  name="message"
+                  placeholder="Credit Score"
+                  name="CreditScore"
+                  onChange={formDataHandleFunc}
+                />
+              </div>
+            </div>
+            <div className="mt-6">
+              <label htmlFor="income" className="sr-only">
+                Income
+              </label>
+              <div className="relative">
+                <textarea
+                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm"
+                  placeholder="Income"
+                  name="Income"
                   onChange={formDataHandleFunc}
                 />
               </div>
