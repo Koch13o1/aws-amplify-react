@@ -3,15 +3,16 @@ import { useState } from "react";
 type FormData = {
   name: string;
   email: string;
-  message: string;
+  creditScore: number;
+  income: number;
 };
 
 function App() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    creditScore: "",
-    income:"",
+    creditScore: 0,
+    income: 0,
   });
 
   const formDataHandleFunc = (
@@ -22,7 +23,7 @@ function App() {
     const { name, value } = event.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: name === 'creditScore' || name === 'income' ? Number(value) : value,
     }));
   };
 
@@ -48,10 +49,11 @@ function App() {
       requestOptions
     )
       .then((response) => response.text())
-      .then(console.log('lavda'))
-      .then(console.log(response.text())
-      .then((result) => alert(JSON.parse(result).message))
-      .catch((error) => alert(`error -  ${error}`));
+      .then((result) => {
+        console.log(result);
+        alert(JSON.parse(result).message);
+      })
+      .catch((error) => alert(`Error: ${error}`));
   };
 
   return (
@@ -123,7 +125,7 @@ function App() {
             <button
               type="submit"
               className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white mt-6"
-              onClick={() => formOnSubmitFunc()}
+              onClick={formOnSubmitFunc}
             >
               Send Message
             </button>
