@@ -58,7 +58,7 @@ function App() {
       .then((result) => {
         console.log(result.approvalStatus);
         //alert(JSON.parse(result).message);
-        alert(JSON.parse(result).approvalStatus);
+        alert(result.approvalStatus);
       })
       .catch((error) => alert(`Error: ${error}`));
   };
@@ -72,7 +72,7 @@ function App() {
               Our Banking App
             </h1>
             <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
-              Welcome to the scamming app!
+              Welcome to the our app!
             </p>
             <div className="mt-10">
               <label htmlFor="name" className="sr-only">
