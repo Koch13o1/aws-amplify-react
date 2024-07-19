@@ -41,7 +41,7 @@ function App() {
       income: formData.income ?? 0, // Set default value if not provided
     });
     console.log("Checking here")
-    console.log(creditScore)
+    console.log(body)
 
     const requestOptions = {
       method: "POST",
