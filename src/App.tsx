@@ -54,7 +54,7 @@ function App() {
       "https://3ba6fm208f.execute-api.us-east-2.amazonaws.com/Dev",
       requestOptions
     )
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((result) => {
         console.log(result.approvalStatus);
         //alert(JSON.parse(result).message);
