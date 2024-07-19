@@ -3,8 +3,8 @@ import { useState } from "react";
 type FormData = {
   name: string;
   email: string;
-  creditScore?: number; // Making creditScore optional
-  income?: number; // Making income optional
+  creditScore: number; // Making creditScore optional
+  income: number; // Making income optional
 };
 
 function App() {
