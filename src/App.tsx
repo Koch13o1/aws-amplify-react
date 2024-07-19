@@ -56,7 +56,7 @@ function App() {
     )
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
+        console.log(result.body);
         console.log(result.approvalStatus);
         //alert(JSON.parse(result).message);
         alert(result.approvalStatus);
