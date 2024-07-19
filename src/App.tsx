@@ -57,7 +57,7 @@ function App() {
       .then((response) => response.json())
       .then((result) => {
         console.log(result.body);
-        console.log(result.approvalStatus);
+        console.log(result.body.message + ". Therefore, " + result.body.approvalStatus);
         //alert(JSON.parse(result).message);
         alert(result.approvalStatus);
       })
