@@ -48,6 +48,8 @@ function App() {
       requestOptions
     )
       .then((response) => response.text())
+      .then(console.log('lavda'))
+      .then(console.log(response.text())
       .then((result) => alert(JSON.parse(result).message))
       .catch((error) => alert(`error -  ${error}`));
   };
@@ -61,8 +63,7 @@ function App() {
               Contact Us
             </h1>
             <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Obcaecati sunt dolores deleniti inventore quaerat mollitia?
+              Welcome to the scamming app!
             </p>
             <div className="mt-10">
               <label htmlFor="name" className="sr-only">
@@ -92,14 +93,15 @@ function App() {
               </div>
             </div>
             <div className="mt-6">
-              <label htmlFor="message" className="sr-only">
+              <label htmlFor="creditScore" className="sr-only">
                 Credit Score
               </label>
               <div className="relative">
-                <textarea
+                <input
+                  type="number"
                   className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm"
                   placeholder="Credit Score"
-                  name="CreditScore"
+                  name="creditScore"
                   onChange={formDataHandleFunc}
                 />
               </div>
@@ -109,10 +111,11 @@ function App() {
                 Income
               </label>
               <div className="relative">
-                <textarea
+                <input
+                  type="number"
                   className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm"
                   placeholder="Income"
-                  name="Income"
+                  name="income"
                   onChange={formDataHandleFunc}
                 />
               </div>
