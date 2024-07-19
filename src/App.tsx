@@ -78,4 +78,66 @@ function App() {
               <div className="relative">
                 <input
                   className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm"
-                  placeholder="Na
+                  placeholder="Name"
+                  name="name"
+                  onChange={formDataHandleFunc}
+                />
+              </div>
+            </div>
+            <div className="mt-6">
+              <label htmlFor="email" className="sr-only">
+                Email
+              </label>
+              <div className="relative">
+                <input
+                  type="email"
+                  className="w-full rounded-lg  p-4 pe-12 text-sm shadow-sm"
+                  placeholder="Enter email"
+                  name="email"
+                  onChange={formDataHandleFunc}
+                />
+              </div>
+            </div>
+            <div className="mt-6">
+              <label htmlFor="creditScore" className="sr-only">
+                Credit Score
+              </label>
+              <div className="relative">
+                <input
+                  type="number"
+                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm"
+                  placeholder="Credit Score"
+                  name="creditScore"
+                  onChange={formDataHandleFunc}
+                />
+              </div>
+            </div>
+            <div className="mt-6">
+              <label htmlFor="income" className="sr-only">
+                Income
+              </label>
+              <div className="relative">
+                <input
+                  type="number"
+                  className="w-full rounded-lg p-4 pe-12 text-sm shadow-sm"
+                  placeholder="Income"
+                  name="income"
+                  onChange={formDataHandleFunc}
+                />
+              </div>
+            </div>
+            <button
+              type="submit"
+              className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white mt-6"
+              onClick={formOnSubmitFunc}
+            >
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default App;
