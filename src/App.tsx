@@ -57,7 +57,8 @@ function App() {
       .then((response) => response.text())
       .then((result) => {
         console.log(result.approvalStatus);
-        alert(JSON.parse(result).message);
+        //alert(JSON.parse(result).message);
+        alert(JSON.parse(result).approvalStatus);
       })
       .catch((error) => alert(`Error: ${error}`));
   };
