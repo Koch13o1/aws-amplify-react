@@ -57,10 +57,11 @@ function App() {
       .then((response) => response.text())
       .then((result) => {
         console.log(result)
-        console.log(result.substring(1:10));
+        console.log(result.substring(1, 10));
+        console.log("Hello")
         //console.log(result.body.message + ". Therefore, " + result.body.approvalStatus);
         //alert(JSON.parse(result).message);
-        alert(result.body);
+        alert(result);
       })
       .catch((error) => alert(`Error: ${error}`));
   };
