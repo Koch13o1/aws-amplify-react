@@ -67,7 +67,7 @@ function App() {
         console.log(approvalStatus);
         //console.log(result.body.message + ". Therefore, " + result.body.approvalStatus);
         //alert(JSON.parse(result).message);
-        alert(message + " Therefore, loan is ", approvalStatus);
+        alert(message + " Therefore, loan is " + approvalStatus);
       })
       .catch((error) => alert(`Error: ${error}`));
   };
