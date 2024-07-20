@@ -57,7 +57,7 @@ function App() {
       .then((response) => response.text())
       .then((result) => {
         console.log(result)
-        console.log(result[1:10]);
+        console.log(result.substring(1:10));
         console.log(result.body.message + ". Therefore, " + result.body.approvalStatus);
         //alert(JSON.parse(result).message);
         alert(result.body.message + ". Therefore, " + result.body.approvalStatus);
