@@ -58,9 +58,9 @@ function App() {
       .then((result) => {
         console.log(result)
         console.log(result.substring(1:10));
-        console.log(result.body.message + ". Therefore, " + result.body.approvalStatus);
+        //console.log(result.body.message + ". Therefore, " + result.body.approvalStatus);
         //alert(JSON.parse(result).message);
-        alert(result.body.message + ". Therefore, " + result.body.approvalStatus);
+        alert(result.body);
       })
       .catch((error) => alert(`Error: ${error}`));
   };
