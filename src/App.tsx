@@ -59,7 +59,7 @@ function App() {
         console.log(result.body);
         console.log(result.body.message + ". Therefore, " + result.body.approvalStatus);
         //alert(JSON.parse(result).message);
-        alert(result.approvalStatus);
+        alert(result.body);
       })
       .catch((error) => alert(`Error: ${error}`));
   };
