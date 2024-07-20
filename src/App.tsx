@@ -54,11 +54,17 @@ function App() {
       "https://3ba6fm208f.execute-api.us-east-2.amazonaws.com/Dev",
       requestOptions
     )
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((result) => {
-        console.log(result)
-        console.log(result.substring(1, 10));
-        console.log("Hello")
+        const body = JSON.parse(result.body);
+        
+        // Access properties safely
+        const message = body.message;
+        const approvalStatus = body.approvalStatus;
+        //console.log(result)
+        //console.log(result.substring(1, 10));
+        console.log(message);
+        console.log(approvalStatus);
         //console.log(result.body.message + ". Therefore, " + result.body.approvalStatus);
         //alert(JSON.parse(result).message);
         alert(result);
